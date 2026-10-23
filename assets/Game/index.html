@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9fb" />
+    <meta name="description" content="Game · 发现喜欢的游戏与乐趣" />
+    <title>Game</title>
+    <link rel="icon" href="./images/icon.png" />
+    <link rel="stylesheet" href="./styles/game.css" />
+    <script type="module" src="./scripts/game.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="back-link" href="../../index.html" aria-label="返回主页">← <span>DianBingx</span></a>
+      <a class="wordmark" href="#top">Game<span>．</span></a>
+      <span class="header-note">即刻开玩</span>
+    </header>
+    <main id="top">
+      <div class="intro">
+        <p class="eyebrow">YOUR LITTLE GAME SPACE</p>
+        <h1>Game<span>．</span></h1>
+        <p class="intro-text">一点好奇，一点乐趣。发现你的下一场冒险。</p>
+      </div>
+      <p id="load-status" class="load-status" role="status" aria-live="polite">正在加载游戏…</p>
+      <button id="retry" type="button" hidden>重新加载</button>
+      <div id="game-pages" aria-label="游戏网格"></div>
+      <noscript><p class="load-status">请启用 JavaScript 以加载游戏列表。</p></noscript>
+    </main>
+    <footer>Game · DianBingx</footer>
+  </body>
+</html>

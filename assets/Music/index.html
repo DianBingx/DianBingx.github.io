@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9fb" />
+    <meta name="description" content="Music · 发现喜欢的音乐与节奏" />
+    <title>Music</title>
+    <link rel="icon" href="./images/icon.png" />
+    <link rel="stylesheet" href="./styles/music.css" />
+    <script type="module" src="./scripts/music.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="back-link" href="../../index.html" aria-label="返回主页">← <span>DianBingx</span></a>
+      <a class="wordmark" href="#top">Music<span>．</span></a>
+      <span class="header-note">随心而听</span>
+    </header>
+    <main id="top">
+      <div class="intro">
+        <p class="eyebrow">YOUR LITTLE MUSIC SPACE</p>
+        <h1>Music<span>．</span></h1>
+        <p class="intro-text">一点节奏，一点灵感。找到你的下一段旋律。</p>
+      </div>
+      <p id="load-status" class="load-status" role="status" aria-live="polite">正在加载音乐…</p>
+      <button id="retry" type="button" hidden>重新加载</button>
+      <div id="music-pages" aria-label="音乐网格"></div>
+      <noscript><p class="load-status">请启用 JavaScript 以加载音乐列表。</p></noscript>
+    </main>
+    <footer>Music · DianBingx</footer>
+  </body>
+</html>

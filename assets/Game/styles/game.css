@@ -1,0 +1,56 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #252c38;
+  background: #f8f9fb;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 88px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid #728cd2; outline-offset: 5px; }
+.site-header { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; height: 72px; padding: 0 max(24px, calc((100% - 1080px) / 2)); background: #f8f9fbf2; border-bottom: 1px solid #e8ebf0; backdrop-filter: blur(16px); }
+.back-link { display: flex; gap: 10px; align-items: center; color: #697386; font-size: 13px; }
+.wordmark { font-size: 20px; font-weight: 700; letter-spacing: -1px; }
+.wordmark span, h1 span { color: #728cd2; }
+.header-note { color: #7b8493; font-size: 12px; letter-spacing: 2px; }
+main { max-width: 1128px; margin: auto; padding: 0 24px; }
+.intro { padding: 64px 0 42px; scroll-snap-align: start; }
+.eyebrow { margin: 0 0 16px; color: #7b89a4; font-size: 10px; font-weight: 600; letter-spacing: 3px; }
+h1 { margin: 0; font-size: clamp(44px, 6vw, 64px); letter-spacing: -3px; line-height: 1.1; }
+.intro-text { margin: 18px 0 0; color: #778090; font-size: 14px; line-height: 1.8; }
+.grid-page { min-height: calc(100svh - 104px); padding: 24px 0 40px; scroll-snap-align: start; }
+.page-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e2e6ee; }
+h2 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: 1px; }
+.page-heading > span { color: #8992a2; font-size: 12px; font-variant-numeric: tabular-nums; letter-spacing: 2px; }
+.game-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.game-card { display: block; min-width: 0; padding: 10px; background: white; border: 1px solid #e8ebf1; border-radius: 18px; transition: transform 180ms ease, box-shadow 180ms ease; }
+.game-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #2535490d; }
+.artwork { position: relative; overflow: hidden; aspect-ratio: 1; border-radius: 11px; background: #edf0f8; }
+.artwork-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: #8a9bc2; font-size: 48px; }
+.artwork img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+.card-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 4px 8px; }
+h3 { margin: 0; font-size: 14px; font-weight: 600; line-height: 1.5; overflow-wrap: anywhere; }
+.card-arrow { flex-shrink: 0; color: #8896b3; font-size: 18px; }
+.next-page { display: block; width: fit-content; margin: 36px auto 0; padding: 12px; color: #7785a4; font-size: 12px; letter-spacing: 2px; }
+.load-status { color: #778090; padding: 24px 0; line-height: 1.7; }
+#retry { padding: 12px 24px; border: 1px solid #dce2ee; border-radius: 10px; background: white; color: #536b9d; cursor: pointer; }
+footer { padding: 32px 24px; text-align: center; color: #8992a2; font-size: 11px; letter-spacing: 2px; }
+@media (max-width: 800px) { .game-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; } }
+@media (max-width: 540px) {
+  .site-header { padding: 0 20px; height: 64px; }
+  .header-note { display: none; }
+  main { padding: 0 20px; }
+  .intro { padding: 44px 0 24px; }
+  .intro-text { max-width: 270px; font-size: 13px; }
+  .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .game-card { padding: 8px; border-radius: 14px; }
+  .card-caption { gap: 6px; padding: 12px 2px 6px; }
+  h3 { font-size: 13px; }
+  .grid-page { min-height: calc(100svh - 88px); }
+}
+@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } .game-card { transition: none; } }

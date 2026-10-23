@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #232932;
+  background: #f8f9fb;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at 50% 38%, #fff 0%, #f8f9fb 65%);
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 72px 24px 40px;
+}
+
+.profile { width: min(100%, 340px); text-align: center; }
+
+.avatar-link {
+  position: relative;
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 26px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 0 6px #fff, 0 8px 30px #25354912;
+}
+
+.avatar, .avatar-fallback {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+
+.avatar-fallback {
+  display: grid;
+  place-items: center;
+  background: #e7edfa;
+  color: #536b9d;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.avatar { position: absolute; inset: 0; object-fit: cover; }
+.github-badge {
+  position: absolute;
+  bottom: -3px;
+  right: -5px;
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: white;
+  background: #252b34;
+}
+.github-badge svg { width: 17px; height: 17px; }
+h1 { margin: 0; font-size: 32px; font-weight: 650; letter-spacing: -1.2px; }
+.name-dot { color: #728cd2; }
+.welcome { margin: 12px 0 0; color: #737b88; font-size: 14px; letter-spacing: 2px; }
+.invitation { margin-top: 48px; text-align: left; }
+label { display: block; margin: 0 0 11px 3px; font-size: 12px; font-weight: 500; color: #646e7e; letter-spacing: 1px; }
+.input-wrap { position: relative; }
+.key-icon { position: absolute; left: 18px; top: 18px; width: 20px; height: 20px; color: #929baa; pointer-events: none; }
+input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  padding: 0 56px 0 50px;
+  border: 1px solid #e1e5ec;
+  border-radius: 12px;
+  background: #fff;
+  color: #232932;
+  font: inherit;
+  font-size: 16px;
+  box-shadow: 0 3px 12px #25354903;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+input::placeholder { color: #8c95a3; font-size: 14px; }
+input:hover { border-color: #bbc5d5; }
+input:focus { outline: none; border-color: #829bd5; box-shadow: 0 0 0 4px #829bd51a; }
+.enter-button { position: absolute; right: 6px; top: 6px; width: 44px; height: 44px; border: 0; border-radius: 8px; background: #eef2fa; color: #536b9d; font-size: 24px; cursor: pointer; }
+.enter-button:hover { background: #e1e8f7; }
+.enter-button:focus-visible { outline: 3px solid #829bd5; outline-offset: 2px; }
+.invitation-status { min-height: 18px; margin: 12px 3px 0; color: #737b88; font-size: 12px; }
+.invitation-status[data-error="true"] { color: #b24646; }
+input[aria-invalid="true"] { border-color: #b24646; }
+a:focus-visible { outline: 3px solid #829bd5; outline-offset: 6px; }
+footer { padding: 28px 24px 30px; text-align: center; }
+footer a { color: #737b88; text-decoration: none; font-size: 10px; font-weight: 600; letter-spacing: 2px; }
+footer a:hover { color: #232932; }
+footer span { margin-left: 4px; font-size: 14px; }
+@media (max-width: 480px) {
+  main { padding-top: 48px; }
+  .profile { max-width: 300px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  input { transition: none; }
+}
